@@ -1,0 +1,52 @@
+/*It asks for string but numbers make it easier say 1234->1243 is the highest increment
+*KEY is to start from the right side
+*Find the rightmost value which has another value with lower weight on irs right and swap them
+*from that lower weight to the end reverse the string*/
+
+
+public class MyClass {
+    public static void main(String args[]) {
+     String test = "6789";  //excepted output bca
+     char[] charArr = test.toCharArray();
+     
+     //Find the righmost val which also has a value on the right greater than it
+     
+     int i = charArr.length - 2;
+     
+     while(i > 0){
+         if(charArr[i] < charArr[i + 1]){
+             break;
+         }
+         i--;
+     }
+     
+     if(i == 0){ System.out.println("no answer");}
+     
+     //find the least largest value to the right of the found value
+      //swap
+      
+      char temp = charArr[i + 1];
+      
+      charArr[i + 1] = charArr[i];
+      charArr[i] = temp;
+      
+      int start = i + 1;
+      int end = charArr.length - 1;
+      while (start < end) {
+            char temp1 = charArr[start];
+            charArr[start] = charArr[end];
+            charArr[end] = temp1;
+            start++;
+            end--;
+        }
+      for(char val: charArr){
+          System.out.println(val);
+          }
+       //find the least most right value that is greater than i
+        /* int j = char.length - 1;
+         while(charArr[i] <= charArr[j]){
+                 j--
+         }*/
+         
+         //swap them
+    }
