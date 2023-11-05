@@ -1,4 +1,3 @@
-
 public class MyClass {
     public static void main(String args[]) {
      String test = "6789";  //excepted output bca
