@@ -1,4 +1,10 @@
-// loop through array and set up hashmap with no of occurences > make array nlist which stores int[] > loop through map using for each >  add array in array list using key, value >  array list sort from high to low > make array of size k > loop and add first k values
+// loop through array and set up hashmap with no of occurences 
+// make array nlist which stores int[] 
+//loop through map using for each 
+//add array in array list using key, value 
+//array list sort from high to low 
+//make array of size k 
+//loop and add first k values
 
  Map<Integer, Integer> count = new HashMap<>();
         // loop through array and set up hashmap with no of occurences
