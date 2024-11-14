@@ -1,4 +1,4 @@
-// loop through array and set up hashmap with no of occurences 
+// set up hashmap and loop through array with no of occurences 
 // make array nlist which stores int[] 
 //loop through map using for each 
 //add array in array list using key, value 
