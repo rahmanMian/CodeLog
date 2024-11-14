@@ -9,6 +9,7 @@
  Map<Integer, Integer> count = new HashMap<>();
         // loop through array and set up hashmap with no of occurences
         for(int num: nums){
+            //REMEMEBER PUT               //KEEP NUM FIRST ORDER IMP
             count.put(num, count.getOrDefault(num,0) + 1);
         }
 
@@ -20,13 +21,14 @@
             arr.add(new int[] {entry.getKey(), entry.getValue()});
         }
 
-        //array list sort from high to low
+        //THIS LOOS AT TWO ARRAYS AND SORTS FROM SECOND VALUE FROM DESCENDING
         arr.sort((a, b) -> b[1] - a[1]);
 
         //make array of size k 
-        int[] res = new int[k];c
+        int[] res = new int[k];
         //loop and add first k values
         for (int i = 0; i < k; i++) {
+                      //REMMEBER ARRAYLIST SYNTAX
             res[i] = arr.get(i)[0];
         }
         return res;
