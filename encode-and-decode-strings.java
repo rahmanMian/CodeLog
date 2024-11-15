@@ -1,3 +1,16 @@
+//Make a string builder instance
+//loop trhogu  list
+//append demiliter to loop
+//retrun stringbuilder as string
+
+
+//make new array list of string
+//loop through string
+//sent two points between wherefer you see delimties
+//user str.substring(pointer 1, pointer 2) to .add to the new array list
+
+
+
 class Solution {
 
     public String encode(List<String> strs) { 
@@ -31,4 +44,4 @@ class Solution {
 
           
        
-}
+    }
