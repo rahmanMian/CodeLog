@@ -6,7 +6,7 @@
 //make array of size k 
 //loop and add first k values
 
- class Solution {
+
     public int[] topKFrequent(int[] nums, int k) {
         //make a hash map
         Map<Integer, Integer> hashMap = new HashMap<>();
@@ -36,4 +36,4 @@
 
         return kValues;
     }
-}
+
