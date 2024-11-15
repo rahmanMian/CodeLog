@@ -6,29 +6,34 @@
 //make array of size k 
 //loop and add first k values
 
- Map<Integer, Integer> count = new HashMap<>();
-        // loop through array and set up hashmap with no of occurences
+ class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
+        //make a hash map
+        Map<Integer, Integer> hashMap = new HashMap<>();
+
+        //loop trhough nums ans store occurences for each number in hashMap
         for(int num: nums){
-            //REMEMEBER PUT               //KEEP NUM FIRST ORDER IMP
-            count.put(num, count.getOrDefault(num,0) + 1);
+            hashMap.put(num, hashMap.getOrDefault(num, 0) + 1);
         }
 
-        // make array nlist which stores int[]
-        List<int[]> arr = new ArrayList<>();
-        // loop through map using for each
-        for (Map.Entry<Integer, Integer> entry : count.entrySet()){
-            //add arry in array list using key, value
-            arr.add(new int[] {entry.getKey(), entry.getValue()});
+        //make a array list of int[] as we can easily sort this
+        List<int[]> arrayList = new ArrayList<>();
+
+        //loop throough hashMap entrires and store the key,value pairs as an array in the arrayList
+        for(Map.Entry<Integer, Integer> entries : hashMap.entrySet()){
+            arrayList.add(new int[]{entries.getKey(), entries.getValue()});
         }
 
-        //THIS LOOS AT TWO ARRAYS AND SORTS FROM SECOND VALUE FROM DESCENDING
-        arr.sort((a, b) -> b[1] - a[1]);
+        //sort the arrayList in descending order
+        arrayList.sort((a,b) -> b[1] - a[1]);
 
-        //make array of size k 
-        int[] res = new int[k];
-        //loop and add first k values
-        for (int i = 0; i < k; i++) {
-                      //REMMEBER ARRAYLIST SYNTAX
-            res[i] = arr.get(i)[0];
+        //make an array int of k elements
+        int[] kValues = new int[k];
+
+        for(int i = 0; i < k; i++){
+            kValues[i] = arrayList.get(i)[0];
         }
-        return res;
+
+        return kValues;
+    }
+}
