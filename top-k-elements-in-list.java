@@ -13,24 +13,28 @@
 
         //loop trhough nums ans store occurences for each number in hashMap
         for(int num: nums){
+                    //HASHMAP HAS PUT
             hashMap.put(num, hashMap.getOrDefault(num, 0) + 1);
         }
 
         //make a array list of int[] as we can easily sort this
         List<int[]> arrayList = new ArrayList<>();
 
-        //loop throough hashMap entrires and store the key,value pairs as an array in the arrayList
+        //loop through hashMap entrires and store the key,value pairs as an array in the arrayList
+            //SYNTAX FOR LOOPING THROUGH HASHMAP
         for(Map.Entry<Integer, Integer> entries : hashMap.entrySet()){
+                //ARRAYLIST HAS ADD
             arrayList.add(new int[]{entries.getKey(), entries.getValue()});
         }
 
-        //sort the arrayList in descending order
+        //sort the arrayList in descending order a - b is asceding order
         arrayList.sort((a,b) -> b[1] - a[1]);
 
         //make an array int of k elements
         int[] kValues = new int[k];
 
         for(int i = 0; i < k; i++){
+                                //ARRAYLIST HAS GET
             kValues[i] = arrayList.get(i)[0];
         }
 
