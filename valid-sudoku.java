@@ -1,3 +1,5 @@
+
+// Brute Force shouldve used a hashset indeset
 class Solution {
     public boolean isValidSudoku(char[][] board) {
         //no dup rows
