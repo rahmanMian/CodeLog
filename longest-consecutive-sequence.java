@@ -1,5 +1,33 @@
 class Solution {
     public int longestConsecutive(int[] nums) {
+        Set<Integer> set = new HashSet<>();    
+
+        for(int num: nums){
+            set.add(num);
+        }
+
+        int max = 0;
+        for(int num : set){
+            //new syntax
+            if(set.contains(num+1)){continue;}
+            int count = 1;
+             while(set.contains(num-count)){
+                 count++;
+             }
+
+          max = Math.max(count , max);
+
+        }
+    
+    
+        return max;
+    }
+}
+
+//mysol but arrays.sort(nums) janky
+
+class Solution {
+    public int longestConsecutive(int[] nums) {
         //nums.sort() if its a array list
         Arrays.sort(nums);
         int maxSeq = 1;
