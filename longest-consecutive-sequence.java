@@ -1,5 +1,6 @@
 class Solution {
     public int longestConsecutive(int[] nums) {
+        //nums.sort() if its a array list
         Arrays.sort(nums);
         int maxSeq = 1;
         int sequenceCount = 1;
