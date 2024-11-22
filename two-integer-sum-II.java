@@ -1,4 +1,27 @@
 
+
+//two poitner solution
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+       int left = 0, right = numbers.length - 1;
+
+       while(l < r){
+            int curSum = numbers[left] + numbers[right];
+
+            if (curSum > target){
+                right--;
+            } else if ( curSum < target) {
+                left++;
+            }else {
+                return new int[] {l + 1, r + 1};
+            }
+       }
+       return new int[0];
+    }
+}
+
+
+
 //brute force
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
