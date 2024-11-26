@@ -1,4 +1,6 @@
 import java.util.Collections;
+
+//loook carefully at thos
 class Solution {
 public List<List<Integer>> threeSum(int[] nums) {
         //array we need to find triplets that are unique and add up to zero
@@ -26,7 +28,7 @@ public List<List<Integer>> threeSum(int[] nums) {
                   int sum = nums[i] + nums[j] + nums[k];
 
                   if((sum == 0)){
-            
+                                            //Convert array to list
                       listOfLists.add(Arrays.asList(nums[i], nums[j], nums[k]));
 
                          // Skip duplicate elements for j
