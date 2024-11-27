@@ -1,18 +1,22 @@
 class Solution {
-    public int maxArea(int[] height) {
-        //two pointers left - right
-        int area =  0;
-        int left = 0;
-        int right = height.length - 1;
-        while(left < right){
-            area = Math.max(Math.min(height[left], height[right]) * ((right - left)), area);
-            if(height[left] <= height[right]){
-                left++;
-            }else {
-                right--;
-            }   
-        }
-        return area;
-    }	
-}
+    public int maxArea(int[] heights) {
+        int start = 0;
+        int end = heights.length - 1;
+        int maxWater = 0;
+        int water = 0;
 
+        while(start < end){
+            water = Math.min(heights[start], heights[end]) * (end - start);
+
+            maxWater = Math.max(water, maxWater);
+
+            if(heights[start] > heights[end]){
+                end--;
+            }else{
+                start++;
+            }
+        }
+
+        return maxWater;
+    }
+}
