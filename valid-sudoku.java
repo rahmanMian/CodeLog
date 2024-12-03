@@ -3,6 +3,7 @@
 
 class Solution {
     public boolean isValidSudoku(char[][] board) {
+        //NO HASH IN THIS
         Set<String> seen = new HashSet<>();
 
 
@@ -10,6 +11,7 @@ class Solution {
          for(int col = 0; col < 9; col++){
               char value = board[row][col];
               if(value !=  '.'){
+                  //NEED TO ADD A STRING IN +
               if (!seen.add(value + "r" + row) || !seen.add(value + "c" + col) || !seen.add(value + "b" + row/3 + col/3)){
                 return false;
               }
