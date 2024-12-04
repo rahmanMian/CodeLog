@@ -10,6 +10,7 @@ class Solution {
             if (hashMap.containsKey(target - nums[i])){
                 return new int []{hashMap.get(target - nums[i]), i};
             }
+            //hash map has put not add
             hashMap.put(nums[i], i);
         }
       
