@@ -21,7 +21,7 @@
         List<int[]> arrayList = new ArrayList<>();
 
         //loop through hashMap entrires and store the key,value pairs as an array in the arrayList
-            //SYNTAX FOR LOOPING THROUGH HASHMAP
+            //SYNTAX FOR LOOPING THROUGH HASHMAP          //E is small
         for(Map.Entry<Integer, Integer> entries : hashMap.entrySet()){
                 //ARRAYLIST HAS ADD
             arrayList.add(new int[]{entries.getKey(), entries.getValue()});
