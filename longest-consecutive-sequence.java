@@ -1,3 +1,5 @@
+//YOU DONT KNOW THIS GET A PAPER AND SOLVE IT VISUALLY
+
 class Solution {
     public int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();    
