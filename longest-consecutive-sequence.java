@@ -1,30 +1,33 @@
-//YOU DONT KNOW THIS GET A PAPER AND SOLVE IT VISUALLY
-
 class Solution {
     public int longestConsecutive(int[] nums) {
-        Set<Integer> set = new HashSet<>();    
+        // 2 20 4 10 3 4 5
+        // 2,3,4,5 10 20
+        //logic first add into set and group
+        //then for each group go to largest by checkig if there is a greater value
+        //reverse the serch use a while loop and counter to see how deep it goes
+        //Math.maxt to see the largest seq
+
+        Set<Integer> set = new HashSet<>();
+        
 
         for(int num: nums){
             set.add(num);
         }
 
-        int max = 0;
-        for(int num : set){
-            //new syntax
-            if(set.contains(num+1)){continue;}
+        int max = 1;
+        for(int i = 0; i < nums.length; i++){
+            if(set.contains(nums[i] + 1)){continue;}
             int count = 1;
-             while(set.contains(num-count)){
-                 count++;
-             }
+            while(set.contains(nums[i] - count)){
+                count++;
+            }
 
-          max = Math.max(count , max);
-
+            max = Math.max(count, max);
         }
-    
-    
+
         return max;
+
     }
-}
 
 //mysol but arrays.sort(nums) janky
 
