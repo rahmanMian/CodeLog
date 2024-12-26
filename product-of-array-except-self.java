@@ -28,10 +28,12 @@ public int[] productExceptSelf(int[] nums) {
         ////nothing after so post is identity element
         post[n - 1] = 1;
 
+        //multiply the pre nums value and the array for the prev array for prev valuue
         for(int i = 1; i < n; i++){
             pre[i] = nums[i-1] * pre[i-1];
         }
-                //n-2 cuz we start from n-2 anyway
+
+        //n-2 cuz we need to have a one value gap to multiply
         for(int i = n - 2; i >= 0; i--){
             post[i] = nums[i+1] * post[i+1];
         }
