@@ -6,7 +6,7 @@ class Solution {
         //then for each group go to largest by checkig if there is a greater value
         //reverse the serch use a while loop and counter to see how deep it goes
         //Math.maxt to see the largest seq
-
+        //O(n) the solution technique is INSTEAD OF CHECKIGN FIRST REACH A POINT WHERE THERE IS NO GREATED VALUE THEN CHECK TO AVOID PRIOR REDUNDANT CHECKS
         Set<Integer> set = new HashSet<>();
         
 
