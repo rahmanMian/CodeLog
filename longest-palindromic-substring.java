@@ -68,7 +68,8 @@ class Solution {
            }
 
           //the last move in while moves the indexes out of place so we need to shift back in left is inclusive hence +1 while right is not
-           String palindrome = s.substring(left+1,right);
+                                              //^^^^^^^^^^^^^
+            String palindrome = s.substring(left + 1,right);
            if (palindrome.length() >longest.length()){
                longest = palindrome;
            }
