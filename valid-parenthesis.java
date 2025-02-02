@@ -1,22 +1,23 @@
 class Solution {
     public boolean isValid(String s) {
-        
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
 
-        for(char c: s.toCharArray()){
-            if (c =='('){
-              stack.push(')');
-            }else
-            if (c =='{'){
-               stack.push('}');
-            }else
-            if (c =='['){
+        for (char val : s.toCharArray()) {
+            if (val == '(') {
+                stack.push(')');
+            } else if (val == '{') {
+                stack.push('}');
+            } else if (val == '[') {
                 stack.push(']');
-            } else if(stack.isEmpty() || stack.pop() != c){
-                return false;
+            } else {
+                // If it's a closing bracket, check if stack is empty or if the popped value doesn't match
+                if (stack.isEmpty() || stack.pop() != val) {
+                    return false;
+                }
             }
-            
         }
-        return stack.isEmpty();
+
+        return stack.isEmpty(); // Ensure all brackets are matched
     }
 }
+
