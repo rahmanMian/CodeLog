@@ -1,24 +1,26 @@
 
 //My solution
+
+//oyu will have to remember replaceAll or isLetterOrDigit
 class Solution {
     public boolean isPalindrome(String s) {
-        //first remove white spaces  and keep values only a-z
-                                                      //^means not and swap all these values with ""
-        String cleaned =  s.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
+        String cleanS = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
 
-        int start = 0;
-        int end = cleaned.length() - 1;
+        int left = 0;
+        int right = cleanS.length() - 1;
 
-        while(start < end){
-            if(cleaned.charAt(start) == cleaned.charAt(end)){
-                start++;
-                end--;
-            }else{
-                return false;
-            }
+
+        while(left < right){
+            char lChar = cleanS.charAt(left);
+            char rChar = cleanS.charAt(right);
+
+            if(lChar != rChar){return false;}
+            left++;
+            right--;
         }
 
         return true;
+
     }
 }
 
