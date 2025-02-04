@@ -1,23 +1,32 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
-        if(s.length() != t.length()){
+
+        if (s.length() != t.length()) {
             return false;
         }
 
-        //26 letters in alphabet
-        int[] store = new int[26];
+        int[] arr = new int[26]; //26 characters in alphabet
+
 
         for(int i = 0; i < s.length(); i++){
-            char sVal =  s.charAt(i);
-            char tVal = t.charAt(i);
-            store[sVal - 'a']++;
-            store[tVal  - 'a']--;
+
+            arr[s.charAt(i) - 'a']++;
+            arr[t.charAt(i) - 'a']--;
+
+            // 'a' - 'a' = 0
+            // 'b' - 'a' = 1
+            // 'z' - 'a' = 25
         }
 
-        for(int val : store){
-            if (val != 0){
+
+        for(int val: arr){
+            if(val != 0){
                 return false;
             }
         }
+
         return true;
+
+
     }
+}
