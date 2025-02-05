@@ -1,3 +1,5 @@
+//YOU NEED TO LEARN HASMAP AND ARRAY LSIT AND HOW TO TRAVERSE THROUGH SEARCH THROUGH
+
 // set up hashmap and loop through array with no of occurences 
 // make array nlist which stores int[] 
 //loop through map using for each 
