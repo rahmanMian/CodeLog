@@ -1,4 +1,11 @@
-//YOU NEED TO LEARN HASMAP AND ARRAY LSIT AND HOW TO TRAVERSE THROUGH SEARCH THROUGH
+/*
+*hashmap -> getOrDefault
+*hashmap you put values into it
+*Arraylist had entry
+*for(Map.Entry<Integer, Integer> entries : hashMap.entrySet()){
+ arrayList.sort((a,b) -> b[1] - a[1]);
+kValues[i] = arrayList.get(i)[0];
+*/
 
 // set up hashmap and loop through array with no of occurences 
 // make array nlist which stores int[] 
