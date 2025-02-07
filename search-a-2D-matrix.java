@@ -1,18 +1,24 @@
-//brute force --- solved out of order will get back to you
+/*
+BINARY SEARCH
+O(log m * n) m is binary search for indivual matrix and n is looping through every matrix
+Simple Binary Search while looping through the matrix
+*/
+
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         
-        for(int i = 0; i < matrix.length; i++){
-            int innerArrayLength = matrix[i].length;
-            if(matrix[i][innerArrayLength - 1] < target){
-                continue;
-            }else{
-                int j = 0;
-                while(j < innerArrayLength){
-                    if(matrix[i][j] == target){
-                        return true;
-                    }
-                    j++;
+        for(int matrixNumber = 0; matrixNumber < matrix.length; matrixNumber++){
+            int left = 0;
+            int right = matrix[matrixNumber].length - 1;
+            
+            while(left <= right){
+                  int mid = (left + right) / 2;
+                if(matrix[matrixNumber][mid] == target){
+                    return true;
+                }else if (matrix[matrixNumber][mid] < target){
+                    left = mid + 1;
+                }else{
+                    right = mid - 1;
                 }
             }
         }
