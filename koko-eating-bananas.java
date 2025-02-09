@@ -24,6 +24,7 @@ public class Solution {
                             //needs double and returns double
                 totalTime += Math.ceil((double) p / k);
             }
+                //USE bianry search to eliminate value
             if (totalTime <= h) {
                 res = k;
                 r = k - 1;
