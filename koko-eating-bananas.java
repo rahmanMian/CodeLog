@@ -11,27 +11,28 @@
 
 public class Solution {
     public int minEatingSpeed(int[] piles, int h) {
-        int l = 1;
-        //stroes max value of the mile as an in
-        int r = Arrays.stream(piles).max().getAsInt();
-        int res = r;
+        int left = 1;
+        int right = Arrays.stream(piles).max().getAsInt();
+        int result = right;
 
-        while (l <= r) {
-            int k = (l + r) / 2;
 
-            int totalTime = 0;
-            for (int p : piles) {
-                            //needs double and returns double
-                totalTime += Math.ceil((double) p / k);
+        while(left <= right){
+            int k = (left + right) / 2;
+
+            int hoursTaken = 0;
+            for(int pile: piles){
+                hoursTaken += Math.ceil((double) pile / k);
             }
-                //USE bianry search to eliminate value
-            if (totalTime <= h) {
-                res = k;
-                r = k - 1;
-            } else {
-                l = k + 1;
+
+            //use binary serach
+            if(hoursTaken <= h){
+                right = k - 1;
+                result = k;
+            }else{
+                left = k + 1;
             }
         }
-        return res;
+
+        return result;
     }
 }
