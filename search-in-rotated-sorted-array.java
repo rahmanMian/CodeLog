@@ -1,6 +1,7 @@
 /*
 Binary Search here
 Keep your binary search logic strong and think about the solution. This question isn't hard. Once again O(logN)
+REMEMEBER THE YOU CAN ONLY BINARY SEARCH ON SORTED SIDES
 
 
 
