@@ -1,7 +1,9 @@
 /*
   Binary search
   we need to test every hour with every value to see if the total hours is less than h
-  Math.ceil((double) p / k) imp as it takes a doublle in only OR (num + (othernum - 1) / othernum) also works
+  1. Math.ceil((double) p / k) imp as it takes a doublle in only
+  2.(num + (othernum - 1) / othernum) also works
+  3.int n = pile / middle + ((pile % middle == 0) ? 0 : 1); 
 
    Arrays.stream(piles).max().getAsInt(); NOT NEED CAN JUST SIMPLY LOOP TRHOUGH
 
