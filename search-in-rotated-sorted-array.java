@@ -22,6 +22,8 @@ We choose by which side is sorted first then check if target is present in it
                 return middle;
             }
 
+
+            //<= BECAUSE THEY CAN OVERLAP WHEN VALUES ARE LESS
             if(nums[left] <= nums[middle]){ //left side is sorted
 
                 if(nums[left] <= target && target < nums[middle]){ // if target is on left side
