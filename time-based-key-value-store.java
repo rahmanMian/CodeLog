@@ -5,31 +5,14 @@ THIS IS A ODD QUESTION WITH A LOT OF SYNTAX. COME BACK TO THIS OFTEN IA.
 
 YOU HAVE TO MAKE YOUR OWN DS. BASCILLY HASHMAP WITH THE VALUE BEING A ARRAYLIST WITH <String, Int>
 
+
  map.put(key, new ArrayList<>()); // putting hashmap in first tiem
 map.get(key).add(new Data(value, timestamp)); //geting key adding new value
 
 
-
-V V V V IMP UNDERSTAND THIS. 
-    private HashMap<String, List<Data>> map;
-
-    class Data{
-        String value;
-        int timestamp;
-
-        public Data(String value, int timestamp) {
-            this.value = value;
-            this.timestamp = timestamp;
-        }
-    }
-
-    public TimeMap() {
-        map = new HashMap<>();
-    }
-
-
-
-
+ //why value becaue we want the lowests value befoereleft moves away from range
+                value = dataList.get(middle).value;
+                left = middle + 1;
 
 
 */
