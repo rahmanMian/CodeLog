@@ -1,6 +1,6 @@
 /*
 Sliding Window - O(26 * N) coud be 26 characters
-DONT REALLY UNDERSTAND COME BACK TO THIS
+The slide window is for skipping checking every substring. Moves the left pointer to a new point where it can restart
 
 
 */
