@@ -1,7 +1,5 @@
 /*
-BRUTE FORCE
-
-
+BRUTE FORCE - O(N^2)
 
 
 */
@@ -16,7 +14,7 @@ class Solution {
        
        
     
-
+                        //stop the substring length amount away
         for(int i = 0; i <= s2.length() - s1.length(); i++){
              String sub = s2.substring(i, i + s1.length());
              char[] subArr = sub.toCharArray();
