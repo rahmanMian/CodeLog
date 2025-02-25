@@ -21,7 +21,7 @@ class Main
             base = (base * base) % MOD;   //%MOD is for overflow
             y /= 2; 
         } 
-        return res; 
+        return result; 
     } 
     
     // Function to return the count of distinct 
