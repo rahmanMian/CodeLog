@@ -1,5 +1,5 @@
 /*
-  BRUTEFORCE - O(N^3)
+  BRUTEFORCE - O(N^3) - DOUBLE FOR LOOP AND ONE WHILE LOOP
    String subString = s.substring(i, j + 1);
 */
 
