@@ -1,5 +1,5 @@
 /*
-  BRUTEFORCE - O(N^2)
+  BRUTEFORCE - O(N^3)
    String subString = s.substring(i, j + 1);
 */
 
@@ -21,7 +21,6 @@ class Solution {
     }
     
     
-
     public boolean isPalindrome(String subString){
         int left = 0;
         int right = subString.length() - 1;
@@ -37,3 +36,12 @@ class Solution {
     }   
     
 }
+/*
+EXPAND FROM MIDDLE - O(N^2)
+-EDGE CASE WHEN YOU JUST USE ONE CHAR FROM MIDDLE ONLY ACCOUNTS FOR ODD STRINGS
+-USE TWO VALUES FOR EVEN EDGE CASE
+
+
+
+
+*/
