@@ -40,3 +40,30 @@ class Solution {
 
 //Recursive approach
 //T-O(N) M- O(N)
+
+/*
+1.Use recursion to find last node.
+2. Make its next null as if this was the only node its next would be null
+3.roll back
+4.store the lastnode head in new head.
+5.make the last node point to the current rolled back head by using head.next.next
+6.make current node point to null
+3.roll back ....
+*/
+
+public class Solution {
+    public ListNode reverseList(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode newHead = head;
+        if (head.next != null) {
+            newHead = reverseList(head.next);
+            head.next.next = head;
+        }
+        head.next = null;
+
+        return newHead;
+    }
+}
