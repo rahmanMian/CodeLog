@@ -1,4 +1,3 @@
-//Iterative
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -13,17 +12,24 @@ class Solution {
     public ListNode reverseList(ListNode head) {
 
         ListNode prev = null;
-        ListNode curr = head
+        ListNode curr = head;
 
-            while (cur != null) {
-                ListNode temp = curr.next;
-                curr.next = prev;
-                prev = curr;
-                curr = temp;
-            }
-            return prev;
+        //curr
+        //A -> B -> C  -> null
+        while(curr != null){
+            //keep the next value in store as we will lose it.
+            //temp = B
+            ListNode temp = curr.next;
+            //null <- A
+            curr.next = prev;
+            //prev = A
+            prev = curr;
+            //curr = B
+            curr = temp;
+        }
+
+        return prev;
     }
 }
-
 
 //Recursive approach
