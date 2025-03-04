@@ -7,27 +7,36 @@
  *     ListNode(int val) { this.val = val; }
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
- FINISH THSI
- 
+*DUMMY NODE FOR EDGE CASE
  */
+
+
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
-        if(list1 == null || list2 == null){
-            return null;
+        ListNode dummy = new ListNode(0);
+        ListNode node = dummy;
+        //loop through list
+        while(list1 != null && list2 != null){
+           
+           if(list1.val < list2.val){
+                node.next = list1;
+                list1 = list1.next;
+
+           }else{
+                node.next = list2;
+                list2 = list2.next;
+           }
+
+            node = node.next;
         }
 
-        if(list1.val < list2.val){
-            
-            list2.next.next = list1.next;
-            list1.next = list2;
-            return list1;
+        if(list1 == null){
+            node.next = list2;
         }else{
-            list1.next.next = list2.next;
-            list2.next = list1;
-            return list2;
+            node.next = list1;
         }
 
-        
+        return dummy.next;  
     }
 }
