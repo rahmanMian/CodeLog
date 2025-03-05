@@ -31,3 +31,26 @@ public class Solution {
         return false;
     }
 }
+
+
+//SLOW FAST POINTER SOLUTION
+//T-O(n) M-O(n))
+//Why O(N) cuz fast makes up a pos of 1 everytime. so it will take the length of the list at most which is n.
+//fast moves twice
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        
+        ListNode fast  = head;
+        ListNode slow = head;
+
+                                //cuz .next.next will make an error if .next == null
+        while(fast != null  && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if (fast == slow) return true;
+        }
+
+        return false;
+    }
+}
