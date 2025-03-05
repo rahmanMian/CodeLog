@@ -9,6 +9,8 @@
  *     }
  * }
  */
+
+//T-O(n) M-O(n))
 public class Solution {
     public boolean hasCycle(ListNode head) {
 
