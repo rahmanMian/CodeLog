@@ -12,9 +12,10 @@
 
 /*
 
-O(N^2) - BRUTE FORCE
+O(N) - BRUTE FORCE
 STILL DONT GET COMPLETLY
-
+Interlace by simplying setting opposite pointers front and back
+when i has reached j that is the final node. make that node null out of the loop
 */
 class Solution {
     public void reorderList(ListNode head) {
@@ -24,27 +25,27 @@ class Solution {
         }
 
         List<ListNode> nodes = new ArrayList<>();
-        ListNode cur = head;
-        while (cur != null) {
-            nodes.add(cur);
-            cur = cur.next;
+
+        ListNode curr = head;
+
+        while(curr != null){
+            nodes.add(curr);
+            curr = curr.next;
         }
+        
+        int i = 0,  j = nodes.size() - 1;
 
-        int i = 0; int j = nodes.size() - 1;
-
-        while(i < j){
+        while (i < j){
 
             nodes.get(i).next = nodes.get(j);
             i++;
 
-            if(i >= j){break;}
+            while (i >= j){break;}
 
             nodes.get(j).next = nodes.get(i);
             j--;
         }
 
         nodes.get(i).next = null;
-
-        
-    }
+}
 }
