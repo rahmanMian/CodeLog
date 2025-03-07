@@ -52,42 +52,46 @@ class Solution {
 //T - O(N) M - O(1) - REVERSE AND MERGE
 class Solution {
     public void reorderList(ListNode head) {
-        if (head == null || head.next == null) {
+        if (head == null) {
             return;
         }
 
-        // Step 1: Find the middle of the list
-        ListNode slow = head;
-        ListNode fast = head.next;
-        while (fast != null && fast.next != null) {
+       //Step 1: Splid the list in to halves
+       ListNode slow = head;
+       ListNode fast = head;
+
+       while(fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
-        }
+       }
 
-        // Step 2: Reverse the second half of the list
-        ListNode second = slow.next;
-        ListNode prev = slow.next = null;  // Split the list into two halves
-        
-        
-        while (second != null) {
-            ListNode temp = second.next;
-            second.next = prev;
-            prev = second;
-            second = temp;
-        }
-        
-        // Step 3: Merge two halves
-        ListNode first = head;
-        second = prev;  // `prev` now points to the head of the reversed second half
-        
-        while (second != null) {
-            ListNode tmp1 = first.next;
-            ListNode tmp2 = second.next;
-            first.next = second;
-            second.next = tmp1;
-            first = tmp1;
-            second = tmp2;
-        }
+       //Step 2: reverse second half
+       ListNode secondHalf = slow.next;
+       slow.next = null;
+       ListNode prev = null;
+
+       while(secondHalf != null){
+        ListNode temp = secondHalf.next;
+        secondHalf.next = prev;
+        prev = secondHalf;
+        secondHalf = temp;
+       }
+
+
+       //Step 3: merge them
+
+       secondHalf = prev;
+       ListNode firstHalf = head;
+
+       while(secondHalf != null){
+            ListNode tmp1 = firstHalf.next;
+            ListNode tmp2 = secondHalf.next;
+            firstHalf.next = secondHalf;
+            secondHalf.next = tmp1;
+            firstHalf = tmp1;
+            secondHalf = tmp2;
+       }    
+
     }
-}
 
+}
