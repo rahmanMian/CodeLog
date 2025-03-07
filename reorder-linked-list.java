@@ -79,11 +79,12 @@ class Solution {
 
 
        //Step 3: merge them
-
        secondHalf = prev;
        ListNode firstHalf = head;
-
        while(secondHalf != null){
+            //first points to second
+           //second points to hte next of first
+           //move both forward by themselves
             ListNode tmp1 = firstHalf.next;
             ListNode tmp2 = secondHalf.next;
             firstHalf.next = secondHalf;
