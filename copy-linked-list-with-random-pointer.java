@@ -22,23 +22,26 @@ Loop through list again and reference the new values from there and use the old 
 */
 class Solution {
     public Node copyRandomList(Node head) {
-        Map<Node, Node> old = new HashMap<>();
-     
-        Node cur = head;
-        while (cur != null){
-            Node copy = new Node(cur.val);
-            old.put(cur, copy);
-            cur = cur.next;
-        }
+       Map<Node, Node> map = new HashMap<>();
 
-        cur = head;
-        while (cur != null) {
-            Node copy = old.get(cur);
-            copy.next = old.get(cur.next);
-            copy.random = old.get(cur.random);
-            cur = cur.next;
-        }
 
-        return old.get(head);
+       Node curr = head;
+
+       while(curr != null){
+        Node val = new Node(curr.val);
+        map.put(curr, val);
+        curr = curr.next;
+       }
+
+       curr = head;
+
+       while(curr != null){
+        Node val = map.get(curr);
+        val.next = map.get(curr.next);
+        val.random = map.get(curr.random);
+        curr = curr.next;
+       }
+
+       return map.get(head);
     }
-}
+} 
