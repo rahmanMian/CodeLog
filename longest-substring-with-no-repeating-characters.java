@@ -4,7 +4,7 @@ We keep moving till we find a duplicate. How do we find a duplicate. using a has
 keep removing values from the left until the duplicate is removed. Restart the substring.
 
 
-
+If you dont use contains it reduces time by 2 ms
 */
 
 class Solution {
