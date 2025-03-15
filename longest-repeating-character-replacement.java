@@ -2,7 +2,8 @@
 Sliding Window - O(26 * N) coud be 26 characters
 The slide window is for skipping checking every substring. Moves the left pointer to a new point where it can restart
 
-DO today
+Why 26? Because we dont know the most frequent occuring value. Instead of calculating it we just loop through each unique char at perform the operation
+
 
 */
 
@@ -23,7 +24,7 @@ class Solution {
                 if(s.charAt(right) == c){
                     count++;
                 }
-
+                    //this calcuates all the other vals in the window. If greater than k we cant replace any more vals so move window forward
                 while((right - left + 1) - count > k){
                     if(s.charAt(left) == c){
                         count--;
