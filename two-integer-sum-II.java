@@ -1,5 +1,5 @@
 
-
+//did tdoay but i like this more
 //two poitner solution
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
