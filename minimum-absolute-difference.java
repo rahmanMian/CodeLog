@@ -2,7 +2,7 @@
 Only check adjacent we have dsitnc valeues if equal to min that means move on as other values have to be greated since we sorted it
 
 
-
+O(N * LOG N) for sorting and one loop
 */
 
 
