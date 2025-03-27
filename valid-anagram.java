@@ -1,3 +1,5 @@
+
+//*great sol i did wiht hashmap but was wayyyy slower stick to sthis
 class Solution {
     public boolean isAnagram(String s, String t) {
 
