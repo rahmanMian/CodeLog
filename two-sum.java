@@ -19,7 +19,7 @@ import java.util.Map;
 
 
 
-//HashMap O(1) lookup time so we run this in O(N)
+//HashMap O(1) lookup time so we run this in O(N) dont worrky about dups if we need dup values it will make a new array first
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
