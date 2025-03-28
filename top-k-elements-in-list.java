@@ -16,37 +16,34 @@ kValues[i] = arrayList.get(i)[0];
 //loop and add first k values
 
 
+  class Solution {
     public int[] topKFrequent(int[] nums, int k) {
         //make a hash map
-        Map<Integer, Integer> hashMap = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
 
-        //loop trhough nums ans store occurences for each number in hashMap
+
+        //populate array
         for(int num: nums){
-                    //HASHMAP HAS PUT
-            hashMap.put(num, hashMap.getOrDefault(num, 0) + 1);
+            map.put(num, map.getOrDefault(num,0) + 1);
         }
 
-        //make a array list of int[] as we can easily sort this
-        List<int[]> arrayList = new ArrayList<>();
+        //make list of Integer[] as primitive data types are supported, you can do it it iwll work but it just converts at the abcl
+        List<Integer[]> list = new ArrayList<>();
 
-        //loop through hashMap entrires and store the key,value pairs as an array in the arrayList
-            //SYNTAX FOR LOOPING THROUGH HASHMAP          //E is small
-        for(Map.Entry<Integer, Integer> entries : hashMap.entrySet()){
-                //ARRAYLIST HAS ADD
-            arrayList.add(new int[]{entries.getKey(), entries.getValue()});
+        //tricky synstax- all its doing it looping thorugh map and add values in arraylist as we can sort it
+        for(Map.Entry<Integer, Integer> entry : map.entrySet()){
+            list.add(new Integer[]{entry.getKey(), entry.getValue()});
         }
 
-        //sort the arrayList in descending order a - b is asceding order
-        arrayList.sort((a,b) -> b[1] - a[1]);
-
-        //make an array int of k elements
-        int[] kValues = new int[k];
-
+        //sorting in descending order using values
+        list.sort((a, b) -> b[1] - a[1]);
+        
+        //pick the k top values.
+        int[] arr = new int[k];
         for(int i = 0; i < k; i++){
-                                //ARRAYLIST HAS GET
-            kValues[i] = arrayList.get(i)[0];
+            arr[i] = list.get(i)[0];
         }
-
-        return kValues;
-    }
-
+        
+        return arr;
+}
+}
