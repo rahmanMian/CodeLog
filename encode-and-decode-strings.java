@@ -10,38 +10,35 @@
 //user str.substring(pointer 1, pointer 2) to .add to the new array list
 
 
-
 class Solution {
 
     public String encode(List<String> strs) { 
         StringBuilder sb = new StringBuilder();
-
-        for(int i = 0;i < strs.size(); i++){
-            sb.append("~").append(strs.get(i));
+        
+        for( String s : strs){
+            sb.append(s.length()).append('#').append(s);
         }
-      
         return sb.toString();
     }
 
   public List<String> decode(String str) {
     List<String> decoded = new ArrayList<>();
    
-   int i = 0;
-   while(i < str.length()){
-      int j = i;
-      if(str.charAt(j) == '~'){
-        j++;
-      }
-      i++;
-      while( i < str.length() && str.charAt(i) != '~'){
-         i++;
-      }
-     decoded.add(str.substring(j, i));
-   }
-
-   return decoded;
-}
-
-          
-       
+    int i = 0;
+    while(i < str.length()){
+        int j = i;
+        while(str.charAt(j) != '#'){
+            j++; //find #
+        }
+                    //syntax check
+        int length = Integer.parseInt(str.substring(i, j));
+        i = j + 1;
+        j = i + length;
+        decoded.add(str.substring(i, j));
+        i = j;
     }
+
+    return decoded;
+ }
+     
+}
