@@ -17,6 +17,7 @@ public int[] productExceptSelf(int[] nums) {
 // prefix postifx -- calculate prodcut for values before and store, calcuata for each step after and store
 // store in two arrays
 // make a final array to store the pre and post mult
+//good sol you just made nums.length - 1 while making array
 
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
