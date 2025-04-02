@@ -1,6 +1,6 @@
 //optimal add row and col dupr 
 // row/3 and col/3 will put these in sub boxes
-//do it
+
 class Solution {
     public boolean isValidSudoku(char[][] board) {
         //NO HASH IN THIS
