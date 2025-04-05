@@ -1,5 +1,3 @@
-/*Run it */
-
 class Solution {
     public int longestConsecutive(int[] nums) {
         // 2 20 4 10 3 4 5
@@ -31,8 +29,7 @@ class Solution {
 
     }
 
-//mysol but arrays.sort(nums) janky
-
+//mysol but arrays.sort(nums) janky its faster tho
 class Solution {
     public int longestConsecutive(int[] nums) {
         //nums.sort() if its a array list
