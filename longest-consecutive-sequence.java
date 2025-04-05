@@ -16,6 +16,7 @@ class Solution {
 
         int max = 1;
         for(int i = 0; i < nums.length; i++){
+            //this is the line that makes it O(n) as  we only run while loop at  end of sequence for worst O(n) so O(2n)
             if(set.contains(nums[i] + 1)){continue;}
             int count = 1;
             while(set.contains(nums[i] - count)){
