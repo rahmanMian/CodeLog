@@ -1,7 +1,7 @@
 
 //My solution
 
-//you will have to remember replaceAll or isLetterOrDigit
+//you will have to remember replaceAll or isLetterOrDigit ^a-zA-Z0-9
 class Solution {
     public boolean isPalindrome(String s) {
         String cleanS = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
