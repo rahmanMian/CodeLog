@@ -5,7 +5,7 @@ class Solution {
         Arrays.sort(nums);
         List<List<Integer>> list = new ArrayList<>();
         for(int i = 0; i < nums.length; i++){
-            if(i > 0 && nums[i] == nums[i+1]){continue;}//avoid dups for first value
+            if(i > 0 && nums[i] == nums[i+1]){continue;}//avoid dups for first value 
 
             int start = i + 1;
             int end = nums.length - 1;
