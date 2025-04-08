@@ -10,7 +10,8 @@ public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         //-2 cuz we have two pointers for checking
         for(int i = 0; i < nums.length - 2; i++){
-        
+
+        //WE DO -1 AS WE FIRST CHECCK THE FIRST 3 THEN MOVE FOR DUPS AS WE WILL SKIP VALUES
         //this is a duplicate check, continue means to skip this iteration this may give a dup value aif not done
         // way this is set up in ascedning meaning having the same i,start,end values in same position may lead to dups
             if(i > 0 && nums[i] == nums[i-1]){
