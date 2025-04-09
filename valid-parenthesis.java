@@ -11,6 +11,7 @@ class Solution {
                 stack.push(']');
             } else {
                 // If it's a closing bracket, check if stack is empty or if the popped value doesn't match
+                //isEmpty for  edge case: "]"
                 if (stack.isEmpty() || stack.pop() != val) {
                     return false;
                 }
