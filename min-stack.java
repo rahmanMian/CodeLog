@@ -1,4 +1,10 @@
+
 //.peek() is whats used
+/*if(stack.peek().equals(minStack.peek())){
+            minStack.pop();
+        }
+        USE THIS NEXT TIME
+*/
 
 class MinStack {
     private Stack<Integer> stack;
