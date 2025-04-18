@@ -16,6 +16,7 @@ T - O(N) M - O(N) - BRUTE FORCE
 Interlace by simplying setting opposite pointers front and back
 when i has reached j that is the final node. make that node null out of the loop
 */
+//do thsi wihtout looking tom
 class Solution {
     public void reorderList(ListNode head) {
 
