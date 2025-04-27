@@ -43,7 +43,7 @@ public class Solution {
         ListNode fast  = head;
         ListNode slow = head;
 
-                                //cuz .next.next will make an error if .next == null
+                                //.next.next will cause an error if we dotn check this
         while(fast != null  && fast.next != null){
             fast = fast.next.next;
             slow = slow.next;
