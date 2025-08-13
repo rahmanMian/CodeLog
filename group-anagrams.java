@@ -2,9 +2,8 @@
    map.put(sortedString, new ArrayList<>());
    map.get(sortedString).add(strs[i]);
    keep this in mind 
-   ArrayList<>(map.values()); map.values() return a collection. meaing [] but mutable. Thats why we can direclty pass it in
+   ArrayList<>(map.values()); map.values() return a collection(general version of list,map). arraylist is a specific collection. meaing [] but mutable. Thats why we can direclty pass it inn
 */
-
 
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
