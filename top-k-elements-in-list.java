@@ -1,4 +1,5 @@
 /*
+this mad syntaxy 
 *hashmap -> getOrDefault
 *hashmap you put values into it
 *Arraylist had entry
