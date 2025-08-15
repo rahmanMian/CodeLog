@@ -10,14 +10,19 @@
 //user str.substring(pointer 1, pointer 2) to .add to the new array list
 
 
+
+
 class Solution {
 
     public String encode(List<String> strs) { 
+        //make new string builder
         StringBuilder sb = new StringBuilder();
-        
+        //  number of string gives trigger on how long to truncate s 
         for( String s : strs){
             sb.append(s.length()).append('#').append(s);
         }
+
+        //convert to string
         return sb.toString();
     }
 
@@ -30,7 +35,7 @@ class Solution {
         while(str.charAt(j) != '#'){
             j++; //find #
         }
-                    //syntax check
+        //find length to check
         int length = Integer.parseInt(str.substring(i, j));
         i = j + 1;
         j = i + length;
@@ -42,3 +47,4 @@ class Solution {
  }
      
 }
+
