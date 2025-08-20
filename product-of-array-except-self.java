@@ -18,6 +18,8 @@ public int[] productExceptSelf(int[] nums) {
 // store in two arrays
 // make a final array to store the pre and post mult
 //good sol you just made nums.length - 1 while making array
+// just make 3 arrays
+
 
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
