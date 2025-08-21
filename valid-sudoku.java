@@ -1,6 +1,6 @@
 //optimal add row and col dupr 
 // row/3 and col/3 will put these in sub boxes
-
+//each row should be unqiue for that row. each col should we unique for that col, each sub box is unique. They all are categorized and groupd into 3.
 class Solution {
     public boolean isValidSudoku(char[][] board) {
         //NO HASH IN THIS
