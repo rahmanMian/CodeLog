@@ -7,6 +7,14 @@ class Solution {
         //reverse the serch use a while loop and counter to see how deep it goes
         //Math.maxt to see the largest seq
         //O(n) the solution technique is INSTEAD OF CHECKIGN FIRST REACH A POINT WHERE THERE IS NO GREATED VALUE THEN CHECK TO AVOID PRIOR REDUNDANT CHECKS
+        //What's a redundant check? 
+        //   Start at 1: finds 2, 3, 4 → count = 4 ✅
+        //   Start at 2: finds 3, 4 → count = 3 ❌ (already counted)
+        //   Start at 3: finds 4 → count = 2 ❌
+        //   Start at 4: no 5 → count = 1 ❌
+        //   Start at 100: no 101 → count = 1
+        //   Start at 200: no 201 → count = 1
+
         Set<Integer> set = new HashSet<>();
         
 
