@@ -1,6 +1,6 @@
-
+ 
 //My solution
-
+///yeah mon remember the syntax
 //you will have to remember replaceAll or isLetterOrDigit ^a-zA-Z0-9
 class Solution {
     public boolean isPalindrome(String s) {
