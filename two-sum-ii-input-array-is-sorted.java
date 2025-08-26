@@ -16,7 +16,7 @@ class Solution {
                 return new int[] {l + 1, r + 1};
             }
        }
-       return new int[0];
+       return new int[0]; //return null works here too
     }
 }
 
