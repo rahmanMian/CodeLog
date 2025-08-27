@@ -4,7 +4,6 @@ public List<List<Integer>> threeSum(int[] nums) {
         //array we need to find triplets that are unique and add up to zero
         //Hint: lock one value eg -1
         //apply two sum on other values but target val is -()
-
         
         List<List<Integer>> listOfLists = new ArrayList<>();
         Arrays.sort(nums);
