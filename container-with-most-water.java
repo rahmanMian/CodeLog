@@ -1,4 +1,5 @@
 //Two pointer approach, Math.min is cool
+// ye simple approach with teh min
 
 class Solution {
     public int maxArea(int[] heights) {
