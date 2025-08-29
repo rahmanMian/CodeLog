@@ -1,4 +1,4 @@
-//add the other brakcer and we have to remove it for the next line
+//add the other bracket and we have to remove it for the next line
 
 class Solution {
     public boolean isValid(String s) {
