@@ -19,7 +19,13 @@ class MinStack {
         if(minStack.isEmpty()){minStack.push(val);}else if(val <= minStack.peek()){minStack.push(val);}
 
     }
-    
+  
+            
+/*if(stack.peek().equals(minStack.peek())){
+            minStack.pop();
+        }
+        USE THIS NEXT TIME
+*/
     public void pop() {
         int val = stack.peek();
         if(minStack.peek() == val){minStack.pop();}
