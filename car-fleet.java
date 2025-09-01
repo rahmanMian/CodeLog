@@ -9,7 +9,6 @@ O(nlogn) -> Dual-Pivot Quicksort -> O(n) < O(nlogn) -> we take the worse time
  
 */
 
-
 class Solution {
     public int carFleet(int target, int[] position, int[] speed) {
         
@@ -22,6 +21,9 @@ class Solution {
 
         Stack<Double> stack = new Stack<>();
         
+        /*move backwards because if you start from the front cars that supposed to have finished that were closer would not have be caclcuatedv -- eg usain bolt vs me. I am  really close to the finish but if you start usaim
+        he will catch up to me because he is faster and then you ignore my calcuation. So the result will be 1 not 2
+        */
         for(int i =  position.length - 1; i >= 0; i--){
             if(stack.isEmpty() || map.get(position[i]) > stack.peek()){
                 stack.push(map.get(position[i]));
@@ -30,3 +32,4 @@ class Solution {
         }
         return stack.size();
     }
+}
