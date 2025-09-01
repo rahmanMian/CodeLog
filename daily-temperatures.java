@@ -19,7 +19,7 @@ class Solution {
 
 
 //Stack   - O(2n) -> O(n)
-//stack like pancakes unitl oyu find a value higher - > that means that val is higher than all the values in the stack. You can now empty the stack one by one and get the days till
+//stack like pancakes unitl you find a value higher - > that means that val is higher than all the values in the stack. You can now empty the stack one by one and get the days till
 
 
 class Solution {
