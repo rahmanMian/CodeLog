@@ -1,8 +1,7 @@
 /*
 Binary search very optimal for sorter in ascending order - O(N)
 left <= right is important if the value is on the edge / only value to begin with
-
-
+remeber the edge
 */
 
 class Solution {
