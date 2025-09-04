@@ -1,7 +1,7 @@
 /*
 BINARY SEARCH
 O(log m * n) m is binary search for indivual matrix and n is looping through every matrix
-Simple Binary Search while looping through the matrix
+Simple Binary Search You just  have to loop through the matrix 
 */
 
 class Solution {
