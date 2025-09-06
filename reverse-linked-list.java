@@ -9,10 +9,7 @@ Your recursion is weak
  *     ListNode(int val) { this.val = val; }
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
-//iterative easy forucs on recuriosn
-
-
-
+//iterative easy focus on recursion
 
  Iterative
  T-O(N) M - O(1)
