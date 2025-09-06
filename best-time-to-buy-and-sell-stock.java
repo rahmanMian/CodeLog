@@ -17,7 +17,7 @@ class Solution {
       for(int right = 1; right < prices.length; right++){
          
          maxProfit = Math.max(maxProfit, prices[right] - prices[left]);
-          
+          //price dropped switch
          if(prices[right] < prices[left]){
             left = right;
          }
