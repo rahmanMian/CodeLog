@@ -50,13 +50,11 @@ class Solution {
 6.make current node point to null
 3.roll back ....
 */
-
 public class Solution {
     public ListNode reverseList(ListNode head) {
         if (head == null) {
             return null;
         }
-
         ListNode newHead = head;
         if (head.next != null) {
             newHead = reverseList(head.next);
