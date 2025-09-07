@@ -16,7 +16,7 @@
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
-     //DUMMY NODE FOR EDGE CASE  
+     //DUMMY NODE FOR EDGE CASE -> Whats the edge case g?
      ListNode dummy = new ListNode(0); //dont make this null
      ListNode node = dummy;
 
