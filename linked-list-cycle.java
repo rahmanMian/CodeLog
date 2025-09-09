@@ -39,11 +39,11 @@ public class Solution {
 //fast moves twice
 public class Solution {
     public boolean hasCycle(ListNode head) {
-        
+        //THIS IS ACTAULLY THYE MOVE
         ListNode fast  = head;
         ListNode slow = head;
 
-                                //.next.next will cause an error if we dotn check this
+                                //.next.next will cause an error if we dotn check this - GOOD BOY
         while(fast != null  && fast.next != null){
             fast = fast.next.next;
             slow = slow.next;
