@@ -19,33 +19,35 @@ when i has reached j that is the final node. make that node null out of the loop
 //do thsi wihtout looking tom
 class Solution {
     public void reorderList(ListNode head) {
-
+        //empty list
         if(head == null){
             return;
         }
-
+         
+         //ArrayList of typpe node
         List<ListNode> nodes = new ArrayList<>();
-
+        //CURR START WITH HED
         ListNode curr = head;
-
+       // add all to array list
         while(curr != null){
             nodes.add(curr);
             curr = curr.next;
-        }
-        
+        }  
+        //pointer at start and ed
         int i = 0,  j = nodes.size() - 1;
-
+         
         while (i < j){
-
+                //first point to last
             nodes.get(i).next = nodes.get(j);
             i++;
 
-            while (i >= j){break;}
-
+            if (i >= j){break;}
+           //last point to curr i(since we did i++ it is the next)
             nodes.get(j).next = nodes.get(i);
+            //move j bakcl
             j--;
         }
-
+        //last i poinot to null
         nodes.get(i).next = null;
 }
 }
