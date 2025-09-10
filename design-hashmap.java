@@ -42,7 +42,7 @@ class MyHashMap {
 
 }
 
-//really mad mem but sick sol
+//really mad mem but sick sol - what is another way?
 class MyHashMap {
     private int[] map;
     public MyHashMap() {
