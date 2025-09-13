@@ -7,6 +7,8 @@ We choose by which side is sorted first then check if target is present in it
 [5,6,1,2,3,4]
 Target = 4
 Dry run in your mind
+
+//imporve would be adding chekcs if left or right is targer. More lines of code tho
 */
 
 
