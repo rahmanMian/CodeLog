@@ -21,7 +21,7 @@ Constraints:
 The length of requestSeq is between 1 and 10⁵.*/
 
 
-//BRUTE FROOCE -- BEST WAY IS THROUGH GREEDY OR DYNAMIC BUT IDK RN
+//BRUTE FORCE -- BEST WAY IS THROUGH GREEDY OR DYNAMIC BUT IDK RN
 
 public class RequestOptimizer {
     public static int minFlipsBruteForce(String requestSeq) {
