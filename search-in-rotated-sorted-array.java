@@ -4,8 +4,9 @@ Keep your binary search logic strong and think about the solution. This question
 REMEMEBER THE YOU CAN ONLY BINARY SEARCH ON SORTED SIDES
 We choose by which side is sorted first then check if target is present in it
 
-
-
+[5,6,1,2,3,4]
+Target = 4
+Dry run in your mind
 */
 
 
