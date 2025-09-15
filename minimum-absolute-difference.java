@@ -19,7 +19,7 @@ class Solution {
             minDiff = Math.min(minDiff, arr[i + 1] - arr[i]);
         }
 
-     
+         // ADD ALL VALUES THAT ARE MIN DIFF
          for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i + 1] - arr[i] == minDiff) {
                 result.add(Arrays.asList(arr[i], arr[i + 1]));
