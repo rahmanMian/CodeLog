@@ -28,6 +28,7 @@ class Solution {
        Node curr = head;
 
        while(curr != null){
+        //deep copy
         Node val = new Node(curr.val);
         map.put(curr, val);
         curr = curr.next;
@@ -38,6 +39,7 @@ class Solution {
        while(curr != null){
         Node val = map.get(curr);
         val.next = map.get(curr.next);
+        //forgot ranodm - just questopm check?
         val.random = map.get(curr.random);
         curr = curr.next;
        }
