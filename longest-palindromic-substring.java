@@ -4,8 +4,7 @@ class Solution {
 
         int maxCount = 0;
         String maxPalindrome = "";
-
-        
+        //Simple just calcuate all the substrings and take max
         for(int i = 0; i < s.length(); i++){
             //KEEP I+1 AS RIGHT NOT INCLUSIVE
             for(int j = i + 1; j <= s.length(); j++){
