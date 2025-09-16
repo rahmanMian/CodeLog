@@ -45,7 +45,7 @@ class Solution {
     public String longestPalindrome(String s) {
        if(s.length() <= 1 ){return s;}
 
-        //WE SEND TWO VALUES AS THERE IS AN EVEN OR ODD CASE FOR EACH SUBSTRING
+        //WE SEND TWO VALUES AS THERE IS AN EVEN OR ODD CASE FOR EACH SUBSTRING -> look into the even odd case
         String val1 = subSet(s,0);
         String val2 = subSet(s,1);
      return val1.length() > val2.length() ? val1 : val2;
