@@ -9,6 +9,9 @@ class Solution {
       //set slow.next = slow.next.next
       //return head
 
+        //thing anbout it g make a n distance between slow and fast
+        //make fast reach the end slow will be right behing n
+
      ListNode slow = head, fast = head;
 
      for(int i = 0; i < n; i++){
