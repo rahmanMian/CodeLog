@@ -1,4 +1,44 @@
 public class MyClass {
+    public static void main(String[] args) {
+        String test = "6789";
+        char[] charArr = test.toCharArray();
+
+        int i = charArr.length - 2;
+        while (i >= 0 && charArr[i] >= charArr[i + 1]) {
+            i--;
+        }
+
+        if (i < 0) {
+            System.out.println("no answer");
+            return;
+        }
+
+        int j = charArr.length - 1;
+        while (charArr[j] <= charArr[i]) {
+            j--;
+        }
+
+        // Swap pivot and successor
+        char temp = charArr[i];
+        charArr[i] = charArr[j];
+        charArr[j] = temp;
+
+        // Reverse suffix
+        int start = i + 1, end = charArr.length - 1;
+        while (start < end) {
+            char t = charArr[start];
+            charArr[start] = charArr[end];
+            charArr[end] = t;
+            start++;
+            end--;
+        }
+
+        System.out.println(new String(charArr));
+    }
+}
+
+
+public class MyClass {
     public static void main(String args[]) {
      String test = "6789";  //excepted output bca
      char[] charArr = test.toCharArray();
