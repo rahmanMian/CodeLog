@@ -20,7 +20,7 @@ class Solution {
         return count;
     }
     
-    
+    // Remember the middle expansion
     public boolean isPalindrome(String subString){
         int left = 0;
         int right = subString.length() - 1;
