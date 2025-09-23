@@ -4,6 +4,9 @@ The slide window is for skipping checking every substring. Moves the left pointe
 
 Why 26? Because we dont know the most frequent occuring value. Instead of calculating it we just loop through each unique char at perform the operation
 
+Input: s = "ABAB", k = 2
+Output: 4
+Explanation: Replace the two 'A's with two 'B's or vice versa.
 
 */
 
