@@ -16,7 +16,7 @@ class Solution {
        
         int result = 0;
   
-
+        //try for all vals in string
         for(char val: s.toCharArray()){
             charSet.add(val);
         }
