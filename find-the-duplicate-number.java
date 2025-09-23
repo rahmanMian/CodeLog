@@ -3,7 +3,7 @@ my sol
 */
 class Solution {
     public int findDuplicate(int[] nums) {
-
+         //just use a hashset bro
         Map<Integer, Integer> map = new HashMap<>();
         
 
