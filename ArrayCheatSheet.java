@@ -77,6 +77,7 @@ public class ArrayCheatSheet {
         Arrays.sort(arr); // Sorts the array in ascending order
 
         // Searching
+        //this cool
         int searchKey = 3;
         int index = Arrays.binarySearch(arr, searchKey); // Binary search (array must be sorted)
         System.out.println("Index of " + searchKey + ": " + index);
