@@ -6,7 +6,7 @@
   3.int n = pile / middle + ((pile % middle == 0) ? 0 : 1); 
 
    Arrays.stream(piles).max().getAsInt(); NOT NEED CAN JUST SIMPLY LOOP TRHOUGH
-
+  yo read this
 
 */
 
