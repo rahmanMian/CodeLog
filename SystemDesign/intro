@@ -1,0 +1,31 @@
+Step 1 -> 5 min
+Understand the problem
+Step 2 -> 20 min
+Propose High Level Design and get buy in
+Step 3 -> 15 min
+Design Deep Dive
+Step 4 -> 5 min
+Wrap up
+
+Step 1:
+Red flag to jump in
+Who are the users?
+What is the purpose?
+Eg Chat App
+What chat app do you need eg- Skype whatsapp discord have their own needs
+Decide Features to build -> make sure interviewer agrees
+Non Functional requirements -> scale and performance 
+
+AT THE END:
+1. Short features to design for
+2. Non Functional requirements
+
+
+Step 2:
+Start with APIS -> establish contract between users and backend
+Turn requirements -> APIS USE REST IF NOT SPECIFY
+DO NOT INTRO APIS NOT CONNECTED TO REQUIREMENTS
+WEBSOCKET FOR TWO WAY -> HARD TO SCALE
+NOW HHL DESIGN DIAGRAM
+BLUEPRINT
+START WITH LOAD BALANCER > DATA STORAGE LAYER SCRATCH THE TOP
