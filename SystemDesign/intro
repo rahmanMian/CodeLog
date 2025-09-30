@@ -29,3 +29,23 @@ WEBSOCKET FOR TWO WAY -> HARD TO SCALE
 NOW HHL DESIGN DIAGRAM
 BLUEPRINT
 START WITH LOAD BALANCER > DATA STORAGE LAYER SCRATCH THE TOP
+While developing design maintain discussion points for later eg database scaling high concurrency failure scenarios
+DONT GO INTO DETAIL
+Final step -> data model and schema
+discuss db choices and indexing options
+Take a step back and review
+
+Step 3:
+Identity potential problematic areas
+talk to interviewer about this
+Pick up onn interviewr body lang if shown sign of distress
+Discussion:
+Aritculate the Problem
+Make two solutions
+Discuss trade off solutions -> use numbers
+Pick solution and discuss implementaiton
+
+Step 4:
+Summarize desing
+focus on unique parts of sol
+ask interview about company too
