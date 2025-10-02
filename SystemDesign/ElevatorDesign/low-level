@@ -1,1 +1,11 @@
 
+Elevator Interface:
+Encapsulates the object
+move(): what floor the elevator goes to
+Dispactcher Interface:
+Encapsulates logic for sending new elevator ride requests to specific elevators
+add_elevator_request(current_floor, moving_to):
+remove_elevator_request(current_floor, moving_to):
+get_request_to_handle(current_floor, moving_to):
+has_unfulfilled_requests(current_floor, moving_to):
+Two states: Passive and Active
