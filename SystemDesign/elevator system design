@@ -43,6 +43,33 @@ Elevator Buttons Class  and Hall Button Class use button interface
 Door Class Open() Close() isOpen()
 Elevator Motion Interface move(destination floor) stop() 
 
+THE SCHDEULING ALGORITHM:
+1.First come first serve
+  Hall buttons are connected to algo
+  All requests go in a queue
+  4 STATES THINK ABOUT THEM
+Issue: elevator starts at one. if pass wants to go to 5 to 2 and one wants to go to 5 from 3 first elevator go to 5 then down to 3 then back to 5
+
+2.Shortest seek time first(SSTF)
+a) Priority Queue/Min Heap
+b) array stores them and sees min request value
+Issue: group of people at the bottom adn one boy at the top the elevtor will continue stay at the bottom and not serve the top. Multiple request in parallel dont work
+
+3.Scan Algorithm / Elevator Algorithm
+Two boolean arrays> one for up and one for down
+Go all the way up and down and scans
+Issue: Elevator cars are constantly moving. Only change directoin when going ot the end
+
+4. Look(Look ahead and scan) can use hashmap bst etc
+Look ahead and sees if there are requests ahead. If not they dont move. Move only based on requests
+In reality its look + heuristics applied
+
+5. Desitination dispactch algo
+multiple elevators and what to open.
+
+ 
+
+
 
 
 Start with APIS -> establish contract between users and backend
