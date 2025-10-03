@@ -2,10 +2,77 @@
 Elevator Interface:
 Encapsulates the object
 move(): what floor the elevator goes to
+
 Dispactcher Interface:
 Encapsulates logic for sending new elevator ride requests to specific elevators
 add_elevator_request(current_floor, moving_to):
 remove_elevator_request(current_floor, moving_to):
-get_request_to_handle(current_floor, moving_to):
-has_unfulfilled_requests(current_floor, moving_to):
+get_request_to_handle(current_floor, moving_to): do the cool algo and tell the elevator where to go
+has_unfulfilled_requests(current_floor, moving_to): elevator that is passing by a floor and picks up an unfuliffed request
 Two states: Passive and Active
+
+Button Interface to handle buttons: we choose to leave this for mnow.
+
+
+Driver Code Example:
+
+dispatch = new BasicDispatch()
+ele1 = new BasicElevator(dispatch)
+ele2 = new BasicElevator(dispatch)
+while True:
+  ele1.move()
+  ele2.move()
+
+
+Naive Elevator Implementation
+Handle request on at a time
+Upon Handling, ask dispatch for more
+Issue: we use redundant distance
+
+Better algo 
+
+private fifoDispatcher dispatcher;
+private hash-queue (doubly linked list with hashmap) floorsToVisit;
+private intCurrFloor;
+private enum currDirection;
+
+def move(): 
+  if floorsToVisit is empty:
+    wait for dispatch.get_request_to_handle_(currentFloor, direction) to not be null and add to floorsToVist
+   nextFloor = floorsToVist.pop()
+    while currFloor != nextFloor:
+        set currFloor +1 1 if currDirection is UP else -1
+        if dispatch.has_unfulfilled_request(currFloor, currDirection):
+            dispatch.remove_elevator_request(currFloor,currDirecition)
+            floorsToVist.push(Whereever rider presses)
+        if currFloor in floorsToVisit:
+            floorsToVist.remove(currFloor)
+Issues: 
+better to iterate thorugh requests instead of floors -> can use BST > Linear Time Complexity
+Starvation: 
+bouncing between a set of floors
+dude at the bottom waiting looong
+
+Starvation Free Dispatch Service
+Use a doubly linked List + hashmap! keep track of request order, alllow schekcing for request at a floor in O(1)
+and deleting in O(1) if we pick them in passing
+
+Issue: Elevator may have to go all the way across teh building to get passengetr wehn another close elevator caopuld have been dispatch 
+
+
+Starvation free + disatance conscious dispatch service
+each request ranked eg distance to request / time_since_request. Return with lowest number
+Issue: Inefficent, we have to calculate the heuristic for each request. 
+
+Assisng Elevators at Request
+Some elevators have a destinatoin floor and tehn assing you an elevator at request itme. 
+What interface?
+idk
+
+
+
+
+
+
+
+
