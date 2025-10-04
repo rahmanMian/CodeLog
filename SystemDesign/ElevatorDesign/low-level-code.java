@@ -150,6 +150,39 @@ class SmartDispatcher implements Dispatcher {
         floorToNodeMap.put(floor, node);
     }
 
+
+
+    /*    RequestNode current = head;
+    // no startvation here
+    while (current != null) {
+        Elevator bestElevator = null;
+        double bestScore = Double.MAX_VALUE; // lower score = better
+        long now = System.currentTimeMillis();
+
+        for (Elevator elevator : elevators) {
+            int distance = Math.abs(elevator.getCurrentFloor() - current.request.floor);
+            long waitTime = now - current.request.timestamp;
+
+            // Simple priority heuristic: distance / (waitTime+1)
+            double score = (double) distance / (waitTime + 1);
+
+            if (score < bestScore) {
+                bestScore = score;
+                bestElevator = elevator;
+            }
+        }
+
+        if (bestElevator != null) {
+            bestElevator.addRequest(current.request.floor);
+
+            // Remove request from DLL and HashMap
+            RequestNode next = current.next;
+            removeNode(current);
+            current = next;
+        } else {
+            current = current.next;
+        }
+    }*/
     // Dispatch pending requests to elevators
     public void dispatch() {
         RequestNode current = head;
