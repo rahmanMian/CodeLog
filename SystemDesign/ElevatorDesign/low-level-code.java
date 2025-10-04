@@ -2,34 +2,36 @@ import java.util.*;
 
 // ------------------------- Enums -------------------------
 enum Direction {
-    UP, DOWN, IDLE
+    UP, DOWN, IDLE //elevator has three states
 }
 
 enum DoorState {
-    OPEN, CLOSED
+    OPEN, CLOSED  //door has two states
 }
 
 // ------------------------- Interfaces -------------------------
-interface Button {
-    void press();
-    boolean isPressed();
+interface Button { // why interface? hall and elevator button
+    void press(); //simple interface to see whether button has been clicked
+    boolean isPressed(); // to be set via press
 }
 
-interface ElevatorMotion {
-    void moveTo(int destinationFloor);
-    void stop();
+interface ElevatorMotion {  
+    void moveTo(int destinationFloor); // sends the request to move to that floor
+    prviate void stop(int desintaionFloor){
+        System.out.printLn('System stopped at $'destinationFloor');
+    }
 }
 
-interface Dispatcher {
-    void addRequest(int floor, Direction direction);
+interface Dispatcher { //brains assinging the elevator the requests
+    void addRequest(int floor, Direction direction); 
     void assignElevator(Elevator elevator);
 }
 
 // ------------------------- Request Classes -------------------------
-class Request {
+class Request {   
     int floor;
     Direction direction;
-    long timestamp; // For aging / starvation prevention
+    long timestamp; // recors when the request was made so this can be taken into decision
 
     Request(int floor, Direction direction) {
         this.floor = floor;
@@ -38,12 +40,12 @@ class Request {
     }
 }
 
-class RequestNode {
-    Request request;
+class RequestNode { // to be used in the linked List 
+    Request request;  
     RequestNode prev;
     RequestNode next;
 
-    RequestNode(Request request) {
+    RequestNode(Request request) { //stores the prev and next
         this.request = request;
     }
 }
@@ -68,30 +70,30 @@ class Door {
 }
 
 // ------------------------- Elevator Class -------------------------
-class Elevator implements ElevatorMotion {
-    private int currentFloor = 0;
-    private Direction direction = Direction.IDLE;
-    private Queue<Integer> requests = new LinkedList<>();
+class Elevator implements ElevatorMotion { //elevator motion has move to and stop
+    private int currentFloor = 0; //starts at the bttol
+    private Direction direction = Direction.IDLE;  // not moving
+    private Queue<Integer> requests = new LinkedList<>(); //emort request 
     private Door door = new Door();
 
     public int getCurrentFloor() {
         return currentFloor;
     }
 
-    public void addRequest(int floor) {
+    public void addRequest(int floor) { //if that floor doesnt have a request add to queue
         if (!requests.contains(floor)) {
             requests.offer(floor);
         }
     }
 
-    @Override
-    public void moveTo(int destinationFloor) {
-        while (currentFloor != destinationFloor) {
-            direction = (destinationFloor > currentFloor) ? Direction.UP : Direction.DOWN;
-            currentFloor += (direction == Direction.UP) ? 1 : -1;
+    @Override //overrides the elevator motion class
+    public void moveTo(int destinationFloor) { 
+        while (currentFloor != destinationFloor) { //if we not at current floor lets move to destination
+            direction = (destinationFloor > currentFloor) ? Direction.UP : Direction.DOWN; //find direction
+            currentFloor += (direction == Direction.UP) ? 1 : -1; // and or remove accordinlty
             System.out.println("Elevator at floor " + currentFloor);
         }
-        stop();
+        stop(); //stpr at floor
     }
 
     @Override
