@@ -93,7 +93,7 @@ class Elevator implements ElevatorMotion { //elevator motion has move to and sto
             currentFloor += (direction == Direction.UP) ? 1 : -1; // and or remove accordinlty
             System.out.println("Elevator at floor " + currentFloor);
         }
-        stop(); //stpr at floor
+        stop(destinationFloor); //stpr at floor
     }
 
     @Override
