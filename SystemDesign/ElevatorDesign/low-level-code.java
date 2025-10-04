@@ -17,7 +17,7 @@ interface Button { // why interface? hall and elevator button
 
 interface ElevatorMotion {  
     void moveTo(int destinationFloor); // sends the request to move to that floor
-    prviate void stop();
+    void stop();
 }
 
 interface Dispatcher { //brains assinging the elevator the requests
@@ -30,7 +30,8 @@ class Request {
     int floor;
     Direction direction;
     long timestamp; // recors when the request was made so this can be taken into decision
-
+     this.value' refers to the member variable
+                               // 'value' refers to the parameter
     Request(int floor, Direction direction) {
         this.floor = floor;
         this.direction = direction;
