@@ -17,9 +17,7 @@ interface Button { // why interface? hall and elevator button
 
 interface ElevatorMotion {  
     void moveTo(int destinationFloor); // sends the request to move to that floor
-    prviate void stop(int desintaionFloor){
-        System.out.printLn('System stopped at $'destinationFloor');
-    }
+    prviate void stop();
 }
 
 interface Dispatcher { //brains assinging the elevator the requests
@@ -97,14 +95,16 @@ class Elevator implements ElevatorMotion { //elevator motion has move to and sto
     }
 
     @Override
-    public void stop() {
+    public void stop(int DestinationFloor) {
         direction = Direction.IDLE;
         door.open();
         // simulate passenger entering/exiting
         door.close();
+        System.out.printLn('System stopped at $'destinationFloor');
+        
     }
 
-    public void step() {
+    public void step() {// get the next request
         if (!requests.isEmpty()) {
             int next = requests.poll();
             moveTo(next);
