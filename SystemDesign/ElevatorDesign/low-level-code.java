@@ -240,6 +240,8 @@ public class ElevatorSystem {
         dispatcher.assignElevator(e2);
 
         // Simulate passengers pressing hall buttons
+        // also keep in mind the user will have  a floor request tp just go to that floor
+        // keep direction in mind saves calculation time
         dispatcher.addRequest(5, Direction.UP);
         dispatcher.addRequest(10, Direction.DOWN);
         dispatcher.addRequest(3, Direction.UP);
