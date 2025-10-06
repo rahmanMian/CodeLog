@@ -61,3 +61,16 @@ Enter(car_size, entry_number, license plate):
       pQueue[car_size][entry_number].remove(
         elementAtparkingSpotHashMap[spot.name][entry_number]
       )
+
+
+
+Exit(car_size, entry_number, license plate):
+spot =  car_map[license_plate] 
+  for entry_number in pQueue
+      index_number = pQueue[car_size].add(
+        spot based on spot.distanceToEntrances[entry_number]
+      )
+      parkingSpotHashMap[spot.name][entry_number] = index_number
+
+
+
