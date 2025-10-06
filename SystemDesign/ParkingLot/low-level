@@ -1,1 +1,63 @@
+Step 1
+Where do you want to design the parking lot?
+-What cars, where etc,
+How many entraces does the parking lot have?
+What are the main goals of the parking lot?
+1. Enter a lot
+2. Exit a lot
+3. Tell us how many spaces are avaliable?(Big, Medium, Small)
 
+Parking Garage is an Interface -> Users dont need to know the under the hood implementation
+
+Methods of Interface
+Enter(car_size, entry_number, license plate) throws error if none avaliable
+Exit(car_size, entry_number, license plate)  throws error if none avaliable
+Get_num_spots() ->returns a map of the number of spots avaliable for each respective car size
+
+class ParkingSpot()
+  private sizeEnum size;
+  private string name;
+  private int[] distanceToEntrances;
+
+Naive Spot Implementation
+Set up a queue with spots and assign each car with the queue values and remove O(1) implementation
+Issue: Distance not in play, cars travel far
+
+Priority Queue Spot Implementation
+Maintain prioity queue for each entrace and size of vehicle
+assign spot with minmum distance from entrance
+Make sure to remove spot from other priority queue
+Complexitiy can be made easier by sharding and manintaining zones per entrance.
+
+
+
+Code:
+Constructor(list of parking spots, num_entrances):
+  carMap={}//link betweebn car and spot
+
+  for each parking spot:
+    for i in num_entrances:
+      parkingSpotHashMap[parking_spot.name][i] = location in pQueue array   //for parking spot name and entrace where is it stored in the priorityQueue 
+      pQueues[i][parking_spot.size].add(
+       parking_spot based on entrance i
+       )
+
+
+
+Get_num_spots():
+  map={}
+  for size, pQueue in pQueues[0]:
+    map[size] = len(pQueue)
+  return map
+
+
+
+Enter(car_size, entry_number, license plate):
+  pQueue = pQueues[exit_number][car_size]
+  spot = pQueue.peek()
+  name = spot.name
+  car_map[license_plate] = spot
+  for entry_number in pQueue
+      pQueue[car_size][entry_number].remove(
+        elementAtparkingSpotHashMap[spot.name][entry_number]
+      )
