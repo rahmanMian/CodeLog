@@ -22,6 +22,30 @@ class Solution {
     }
 }
 
+
+// class Solution {
+//     public boolean isValidSudoku(char[][] board) {
+//         //9 x 9 board
+//         // each role must be unique 1 - 9
+//             // each col must be unique 1 - 9
+//                 // each of the nine 3 x 3 subboxes show be unique   
+//         //lets loop through row by row and track the state of the col and the boxes as well
+//         //how? we use a hashset with 'r' + row number + number for row tracking
+//         // 'c' + col number + number for col tracking
+//         // 'b' + box number / 3  + number + box trackign 
+//         HashSet<String> set = new HashSet<>();
+//         for(int i = 0; i <  board.length; i++ ){
+//             for(int j = 0; j < board[0].length; j++){
+//                char c = board[i][j];
+                    //&& needs brackets
+//                if(c != '.' &&  (!set.add("r" + board[i][j] +  i) || !set.add("c" + board[i][j] + j) ||  !set.add("b" + board[i][j] + i /3 + j/3))){
+//                 return false;
+//                }
+//             }
+//         }
+//         return true;
+// }
+// }
 // Brute Force shouldve used a hashset indeset
 // class Solution {
 //     public boolean isValidSudoku(char[][] board) {
