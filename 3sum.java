@@ -14,6 +14,7 @@ public List<List<Integer>> threeSum(int[] nums) {
         //WE DO -1 AS WE FIRST CHECCK THE FIRST 3 THEN MOVE FOR DUPS AS WE WILL SKIP VALUES
         //this is a duplicate check, continue means to skip this iteration this may give a dup value aif not done
         // way this is set up in ascedning meaning having the same i,start,end values in same position may lead to dups
+        // focus here 
             if(i > 0 && nums[i] == nums[i-1]){
                 continue; 
             }
