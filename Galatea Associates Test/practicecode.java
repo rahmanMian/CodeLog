@@ -1,0 +1,7 @@
+// KK COM 120
+// KK SOV 200
+// KKK CoM 800
+
+mp=1000
+//80% KK
+//80% COM
