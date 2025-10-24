@@ -4,7 +4,7 @@
 
 mp=1000
 
-//200 could be whatever i want \
+//200 could be whatever i want 
 //
 //80% KKK
 //80% COM
