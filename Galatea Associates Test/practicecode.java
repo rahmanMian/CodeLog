@@ -1,7 +1,10 @@
-// KK COM 120
-// KK SOV 200
-// KKK CoM 800
+// KK COM 100
+// KK SOV 110
+// KKK CoM 120
 
 mp=1000
-//80% KK
+
+//200 could be whatever i want \
+//
+//80% KKK
 //80% COM
