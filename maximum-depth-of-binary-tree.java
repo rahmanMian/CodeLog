@@ -1,18 +1,40 @@
 /**
  * Definition for a binary tree node.
- * struct TreeNode {
+ * public class TreeNode {
  *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
  */
-//send the traverse in with the count as well, keep a public static int maxCount 
 class Solution {
-public:
-    int maxDepth(TreeNode* root) {
-        
+
+    public static int maxCount;
+
+    public int maxDepth(TreeNode root) {
+        //keep maxCount here cuz its not supposed to be shared between test cases
+        maxCount = 0;
+        if(root == null){ return 0;}
+
+       traverse(root, 1); //1 cuz root is 1
+       return maxCount;
     }
-};
+
+
+    public void traverse(TreeNode node, int count){
+
+                if(node == null){return;}
+                
+                maxCount = Math.max(count, maxCount);
+                traverse(node.left, count + 1);
+                traverse(node.right, count + 1);
+    }
+
+
+}
