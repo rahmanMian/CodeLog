@@ -36,6 +36,36 @@ int right = algo(4)
 */
 
 
+/*
+    2
+   / \
+  3   5
+     /
+    4
+
+
+Stack it
+
+
+
+______                                    ________________________
+                                           maxCount = 0
+                                         _________________________
+______
+                                            dfs(3.right == null)  rightDept = 0
+______                                     _______________
+
+dfs(3.left == null) returns 0               dfs(3.left == null) leftDept 0
+                                             _________
+_______                                   dfs(2.left = 3)    
+dfs(2.left = 3)                           ____________
+_______
+dfs(root = 2)                                 dfs(root = 2)
+_______                                   ____________
+
+*/
+
+
 class Solution {
     int maxCount = 0;
 
