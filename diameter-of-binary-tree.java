@@ -40,29 +40,31 @@ int right = algo(4)
     2
    / \
   3   5
-     /
-    4
+     /                                                                                                                                           return Math.max(leftDept, rightDept) + 1 = 2
+    4 
+                                                                                                return (leftDept, rightDept) + 1               __________________________
 
+Stack it                                                                                  ____________________________
+                                                                                          maxCount = 0                                  maxCount = 1
+                                                                                       __________________________                           _____________________________
 
-Stack it
-
-
-
-______                                    ________________________
-                                           maxCount = 0
-                                         _________________________
-______
-                                            dfs(3.right == null)  rightDept = 0
-______                                     _______________
-
-dfs(3.left == null) returns 0               dfs(3.left == null) leftDept 0
-                                             _________
-_______                                   dfs(2.left = 3)    
-dfs(2.left = 3)                           ____________
-_______
-dfs(root = 2)                                 dfs(root = 2)
-_______                                   ____________
-
+                                        Math.max(leftDept, rightDept) + 1                dfs(4.right == null) = 0                       _____________________________
+______                                    ________________________                            _______________________                        
+                                           maxCount = 0                                    dfs(4.left == null) = 0                            dfs(5.right === null) = 0  rightDept = 0
+                                         _________________________                      ________________                                   ______________________________
+______                                                                                                                                                                                                      return 3
+                                            dfs(3.right == null)  rightDept = 0          dfs(5.left = 4)                                         dfs(5.left = 4) = 1    leftDept = 1                        _______________
+______                                     _______________                           _________________                                         __________________
+                                                                                                                                                                                                     maxCount = 3
+dfs(3.left == null) returns 0               dfs(3.left == null) leftDept 0                                                                                                                      ______________________________
+                                                                                      dfs(2.right = 5)                                        dfs(2.right = 5)                       dfs(2.right) = rightDept = 2
+                                             _________                              _________________                                          __________________                   _____________________
+_______                                   dfs(2.left = 3)                           dfs(2.left = 3) = 1                     
+dfs(2.left = 3)                           ____________                           ________________                                           dfs(2.left = 3) = 1                   dfs(2.left) = leftDept = 1
+_______ 
+dfs(root = 2)                                 dfs(root = 2)                         dfs(root = 2)                                            dfs(root = 2)                      ______________
+_______                                   ____________                           ______________                                             ______________                      dfs(root = 2)
+ 
 */
 
 
