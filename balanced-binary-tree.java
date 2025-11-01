@@ -5,13 +5,12 @@ class Solution {
 
         if(Math.abs(getHeight(root.left) - getHeight(root.right) ) > 1){
             return false;
-        }else{
-            return true;
         }
         
+         return isBalanced(root.left) && isBalanced(root.right);
     }
+
 public int getHeight(TreeNode node) {
     if (node == null) return 0;
     return 1 + Math.max(getHeight(node.left), getHeight(node.right));
-}
 }
