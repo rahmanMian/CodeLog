@@ -13,6 +13,8 @@
  *     }
  * }
  */
+/**
+
 class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
 
@@ -24,18 +26,17 @@ class Solution {
  public boolean traverse(TreeNode nodeP, TreeNode nodeQ){
 
    
-    if(nodeP!= null && nodeQ != null){return false;}
+     // both null => same
+        if (nodeP == null && nodeQ == null) return true;
 
-    if(nodeP.val != nodeQ.val){ return false;}
+        // one null and the other not => different
+        if (nodeP == null || nodeQ == null) return false;
 
-    
+        // values differ => different
+        if (nodeP.val != nodeQ.val) return false;
 
-     traverse(nodeP.left, nodeQ.left);
-     traverse(nodeP.right, nodeQ.right);
-
-
-
-return true;
+        // recursively check left and right
+        return traverse(nodeP.left, nodeQ.left) && traverse(nodeP.right, nodeQ.right);
 
  }
 }
