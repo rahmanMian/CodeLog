@@ -43,7 +43,7 @@ class Solution {
 }
 
 
-//yrurur remember the syntax g key valu containsKey
+//yrurur remember the syntax g key value containsKey
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         
