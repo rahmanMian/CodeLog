@@ -16,30 +16,24 @@
 //spli st fork and swap
 // make two funcs
 
-
 class Solution {
     public TreeNode invertTree(TreeNode root) {
-        TreeNode rootCopy = root;
+            traverse(root);
 
-        if(root == null){return root;}
-  
-         traverse(root);
-          
-          return root;
+            return root;
+    }
 
-        }
 
- 
-public void traverse(TreeNode node){
-    if(node == null){return;}
+    public void traverse(TreeNode root){
+        if(root == null){return;}
 
-    TreeNode temp = node.left;
-    node.left = node.right;
-    node.right = temp;
+         TreeNode temp = root.right;
 
-    traverse(node.left);
-    traverse(node.right);
-   
-}
+         root.right = root.left;
+         root.left = temp;
+
+         traverse(root.right);
+         traverse(root.left);
+    }
 
 }
