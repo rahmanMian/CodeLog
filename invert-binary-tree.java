@@ -11,7 +11,7 @@
  *         this.left = left;
  *         this.right = right;
  *     }
- * }
+ * } this
  */
 //spli st fork and swap
 // make two funcs
