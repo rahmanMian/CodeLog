@@ -14,6 +14,7 @@
  *}
  */
 /* Lets get this straih -> what is a balanceed tree -> a tree whoses forks have a difference of dept by one max -> i made the mistakete
+Valid bianry tree but not a binary ssearc tree
 
           1
         /   \
@@ -23,6 +24,8 @@
     /           \
    4             4
    THIS IS THE CASE WHY YOU HAVE TO CHECK EVERY NODE
+
+   valid binary tree  can hav3 any order of node just tow children max
 */
 
 class Solution {
