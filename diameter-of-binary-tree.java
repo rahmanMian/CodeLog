@@ -79,7 +79,7 @@ class Solution {
 
     private int dfs(TreeNode node) {
         if (node == null) return 0;
-
+        // calculate the height at every node then find the max diameter by adding them
         int leftDepth = dfs(node.left);
         int rightDepth = dfs(node.right);
 
