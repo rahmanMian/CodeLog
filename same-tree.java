@@ -13,7 +13,8 @@
  *     }
  * }
  */
-/**
+
+/* Travers every possible node and keep three different cases */
 
 class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
