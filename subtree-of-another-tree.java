@@ -30,24 +30,30 @@ class Solution {
            if(isSubTreePresent(root, subRoot)){
             return true;
            }
-
-
+        
+        // go traverset differnet poitns -> improve this yourself tomorrow
        return  traverseMain(root.left, subRoot) || traverseMain(root.right, subRoot);
     }
 
     public boolean isSubTreePresent(TreeNode root, TreeNode subRoot){
-          
+                
+                //reached the end for both -> this is a sub tree
                 if(root == null && subRoot == null){
                     return true;
                 } 
 
+
+                // one reached the end before no syb treel
                 if(root == null  || subRoot == null){
                     return false;
                 }
-
+                
+                //exit early not same
                   if (root.val != subRoot.val) {
             return false;
         }
+
+               // go left and go right 
                 return isSubTreePresent(root.left, subRoot.left) && isSubTreePresent(root.right, subRoot.right);
                
 
