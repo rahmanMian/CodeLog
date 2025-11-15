@@ -77,24 +77,21 @@ class Solution {
 		// idk why i did this,
             return findPivot(root, p, q);
       
-        
     }
 
-    public TreeNode findPivot(TreeNode root,TreeNode leftNode, TreeNode rightNode){
+    public TreeNode findPivot(TreeNode cur,TreeNode leftNode, TreeNode rightNode){
 
-          if(root.val == leftNode.val){return leftNode;}
-          if(root.val == rightNode.val){return rightNode;}
-          if((root != null) && root.val > leftNode.val && root.val < rightNode.val){return root;} //pivot case
-          
-          if(root.val < leftNode.val && root.val < rightNode.val){
+		// if cur is less than leftNode and less than right
+		//that means we move right towards them
+          if(curr.val < leftNode.val && cur.val < rightNode.val){
             return findPivot(root.right, leftNode, rightNode);
           }
 
-             
-          if(root.val > leftNode.val && root.val > rightNode.val){
+        //if greater that means we move left towards them
+          if(cur.val > leftNode.val && cur.val > rightNode.val){
            return findPivot(root.left, leftNode, rightNode);
           }
-          
-          return root;
+        // we are at the pivot point which is LCA
+          return cur;
     }
 }
