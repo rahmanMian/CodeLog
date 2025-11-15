@@ -59,8 +59,42 @@ return node 3
 
  */
 
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+ /*
+ */
+
 class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+
+		// idk why i did this,
+            return findPivot(root, p, q);
+      
         
+    }
+
+    public TreeNode findPivot(TreeNode root,TreeNode leftNode, TreeNode rightNode){
+
+          if(root.val == leftNode.val){return leftNode;}
+          if(root.val == rightNode.val){return rightNode;}
+          if((root != null) && root.val > leftNode.val && root.val < rightNode.val){return root;} //pivot case
+          
+          if(root.val < leftNode.val && root.val < rightNode.val){
+            return findPivot(root.right, leftNode, rightNode);
+          }
+
+             
+          if(root.val > leftNode.val && root.val > rightNode.val){
+           return findPivot(root.left, leftNode, rightNode);
+          }
+          
+          return root;
     }
 }
