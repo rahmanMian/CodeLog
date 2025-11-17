@@ -24,9 +24,13 @@ Send one left store its value
 Send one right store its value
 
 
-
-
-
+my code will fail here 
+        1
+       / \
+      2   3
+     /     \
+    4       5
+4 and 5 are the same level but they aren't connected
  */
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
