@@ -30,6 +30,7 @@ Send one right store its value
 
 
 What is the case for a level to be compleate?
+Think of the recursion case to sweep a level
  */
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
