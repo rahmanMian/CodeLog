@@ -23,14 +23,13 @@ HaveAnother helper to store values
 Send one left store its value
 Send one right store its value
 
+   1
+  2  3
+    4  5
 
-my code will fail here 
-        1
-       / \
-      2   3
-     /     \
-    4       5
-4 and 5 are the same level but they aren't connected
+
+
+What is the case for a level to be compleate?
  */
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
@@ -38,28 +37,39 @@ class Solution {
         List<List<Integer>> list = new ArrayList<>();
     if(root != null){
         list.add(Arrays.asList(root.val));
-        traverseLevel(root, list);
+        levelSweeper(root.left, root.right, list);
     }
         return list;
     }
 
-    public void traverseLevel(TreeNode curr, List<List<Integer>> list){
+    public void levelSweeper(TreeNode leftNode, TreeNode rightNode, List<List<Integer>> list){
         List<Integer> li = new ArrayList<>();
-          if (curr != null) {
-            if(curr.left != null){
-         li.add(curr.left.val);
+          
+
+          if (leftNode != null) {
+            if(leftNode.left != null){
+              li.add(leftNode.left.val);
             }
-            if(curr.right != null){
-         li.add(curr.right.val);
+            if(leftNode.right != null){
+              li.add(leftNode.right.val);
             }
         }
-        if(!li.isEmpty())
-        list.add(li);
+             if (rightNode != null) {
+            if(rightNode.left != null){
+              li.add(rightNode.left.val);
+            }
+            if(rightNode.right != null){
+              li.add(rightNode.right.val);
+            }
+        }
 
-        if(curr.left != null)
-         traverseLevel(curr.left, list);
-         if(curr.right != null)
-         traverseLevel(curr.right, list);
+
+        if(!li.isEmpty()){list.add(li);}
+        
+        levelSweeper(leftNode.left, rightNode.right, list);
+
     }
+
+}
 
 }
