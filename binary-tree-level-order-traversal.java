@@ -28,7 +28,7 @@ Send one right store its value
     4  5
 
 
-
+THE GAME IS YOUR TRAVERSE THE TREE NORMALL AND STORE THE NEXT NODES IN A ARRAYLIST TO SWEEP THE LEVEL -> WHEN YOU REACH THAT LEVEL TRAVERESE ITS NODES AND STORE IN THE NEXXT LIST -> MAKE A NEW LIST EVERY LEVEL
 What is the case for a level to be compleate?
 Think of the recursion case to sweep a level
  */
