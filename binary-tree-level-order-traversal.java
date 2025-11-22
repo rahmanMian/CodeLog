@@ -28,41 +28,6 @@ Send one right store its value
     4  5
 
 
-THE GAME IS YOUR TRAVERSE THE TREE NORMALL AND STORE THE NEXT NODES IN A ARRAYLIST TO SWEEP THE LEVEL -> WHEN YOU REACH THAT LEVEL TRAVERESE ITS NODES AND STORE IN THE NEXXT LIST -> MAKE A NEW LIST EVERY LEVEL
-What is the case for a level to be compleate?
-Think of the recursion case to sweep a level
- */
-
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
- /*
-Return the level order traversal of the binary tree 
-1. Left to Right
-2. Level to Level
-Call Root
-Have helper function to traverse for nodes
-HaveAnother helper to store values
-Send one left store its value
-Send one right store its value
-
-   1
-  2  3
-    4  5
-
-
 
 What is the case for a level to be compleate?
  */
@@ -87,7 +52,9 @@ class Solution {
         
         // store all the values on that level 
         for (TreeNode node : levelNodes) {
+            //add the val in the level
             values.add(node.val);
+            //now its children will be in the next levele so sendyyyyyy
             if (node.left != null) next.add(node.left);
             if (node.right != null) next.add(node.right);
         }
